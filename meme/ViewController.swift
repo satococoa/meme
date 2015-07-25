@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            SVProgressHUD.show()
+        })
+
     }
 
     override func didReceiveMemoryWarning() {
